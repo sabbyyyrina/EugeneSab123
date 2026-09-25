@@ -1,0 +1,324 @@
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  background-color: #d893b6;
+  color: #d362af;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. NAVIGATION BAR
+   ========================================================================== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 8%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #d893b6;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #d893b6;
+}
+
+/* ==========================================================================
+   3. HERO BANNER
+   ========================================================================== */
+.hero {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  background: linear-gradient(135deg, #f77bd4 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #f77bd4 0%, 100%);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.hero-avatar:hover {
+  transform: scale(1.05);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.hero .highlight {
+  color: #fde047;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 1.8rem;
+}
+
+/* ==========================================================================
+   4. BUTTONS & UI COMPONENTS
+   ========================================================================== */
+.btn {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #4f46e5;
+  padding: 0.75rem 1.8rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #f1f5f9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   5. MAIN CONTENT & CARDS
+   ========================================================================== */
+.container {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f1f5f9;
+}
+
+.card h2 {
+  font-size: 1.6rem;
+  color: #1e293b;
+  margin-bottom: 1.2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.card h2::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #4f46e5, #7c3aed);
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   6. SKILLS BADGES
+   ========================================================================== */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  background-color: #e0e7ff;
+  color: #3730a3;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.tag:hover {
+  background-color: #c7d2fe;
+}
+
+/* ==========================================================================
+   7. ACHIEVEMENTS & PROJECTS GRID
+   ========================================================================== */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-box {
+  background-color: #f8fafc;
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-box h3 {
+  color: #4f46e5;
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.project-box p {
+  font-size: 0.92rem;
+  color: #64748b;
+  margin-bottom: 0.4rem;
+}
+
+/* ==========================================================================
+   8. CONTACT DROPDOWN MENU
+   ========================================================================== */
+.contact-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.contact-btn {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #ffffff;
+  padding: 0.85rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+  transition: all 0.2s ease;
+}
+
+.contact-btn:hover {
+  background: linear-gradient(135deg, #4338ca, #4f46e5);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
+}
+
+.contact-menu {
+  display: none;
+  position: absolute;
+  top: 115%;
+  left: 0;
+  min-width: 290px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  z-index: 50;
+}
+
+.contact-menu.show {
+  display: block;
+}
+
+.contact-item {
+  display: block;
+  padding: 0.85rem 1.2rem;
+  color: #1e293b;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  word-break: break-all;
+}
+
+.contact-item:hover {
+  background-color: #f1f5f9;
+  color: #4f46e5;
+}
+
+/* ==========================================================================
+   9. FOOTER
+   ========================================================================== */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  color: #64748b;
+  font-size: 0.9rem;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 3rem;
+}
+
+/* ==========================================================================
+   10. RESPONSIVE DESIGN (MOBILE ADAPTATION)
+   ========================================================================== */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+}
